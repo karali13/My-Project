@@ -1,0 +1,62 @@
+package test;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+import pojo.LaunchBrowser;
+import pom.LoginPage;
+
+@Listeners(test.listeners.class)
+public class LoginTest extends BaseClass {
+	//static WebDriver driver;
+	@BeforeMethod
+	public void beforeMethod()
+	{
+		driver = LaunchBrowser.chrome("https://www.facebook.com");
+		}
+	
+	@AfterMethod
+	public void aftermethod()
+	{
+		LoginPage POMForfb = new LoginPage(driver);
+		POMForfb.clickLogin();
+
+	}
+	@Test
+	public static void validData(){
+		LoginPage POMForfb = new LoginPage(driver);
+		SoftAssert softAssert = new SoftAssert();
+		POMForfb.enterID("arise@gmail.com");
+		POMForfb.enterPass("1234");
+		String currentTitle = driver.getTitle();
+		softAssert.assertEquals(currentTitle,"Home Page");
+		System.out.println("home page validation done");
+		softAssert.assertTrue(true);
+		System.out.println("assert true validation done");
+		softAssert.assertNull(currentTitle);
+		System.out.println("Post assertion");
+		}
+	
+	@Test
+	public static void InvalidPass()
+	{
+		LoginPage POMForfb = new LoginPage(driver);
+		POMForfb.enterID("arisegmail.com");
+		POMForfb.enterPass("12345");
+	
+		
+	}
+	
+@Test
+	public static void InvalidData()
+	{
+	LoginPage POMForfb = new LoginPage(driver);
+		POMForfb.enterID("@gmail.com");
+		POMForfb.enterPass("123456");
+	
+	}
+}

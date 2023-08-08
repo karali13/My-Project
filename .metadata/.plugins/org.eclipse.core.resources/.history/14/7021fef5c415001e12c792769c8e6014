@@ -1,0 +1,19 @@
+package allProgram;
+
+public class constructor1 {
+
+	public void test()// method
+	{
+		System.out.println("Hello");
+	}
+	
+	public constructor1()//constructor with same name as class and no return type
+	{
+		System.out.println("I am constructor");
+	}
+	
+	public static void main(String[] args) {
+		constructor1 obj = new constructor1();
+		obj.test();
+	}
+}

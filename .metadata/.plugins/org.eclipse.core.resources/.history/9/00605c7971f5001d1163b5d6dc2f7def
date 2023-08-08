@@ -1,0 +1,21 @@
+package homework;
+
+public class star1 {
+	public static void main(String[] args) {
+		for(int i=1; i<=3;i++) 
+		{
+			for(int j=i; j<=5;j++) 
+			{
+				
+				for(int a=j; a<=(2*j)-2; a++)
+				{
+					System.out.print(" ");
+				}
+			System.out.print("*");
+			}
+			
+			System.out.println();
+		}
+	}
+
+}

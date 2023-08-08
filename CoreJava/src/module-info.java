@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author shimp
+ *
+ */
+module CoreJava {
+}

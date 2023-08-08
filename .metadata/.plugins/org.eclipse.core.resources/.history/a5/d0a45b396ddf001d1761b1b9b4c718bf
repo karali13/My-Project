@@ -1,0 +1,22 @@
+package karali_loopsPrg;
+
+public class prime_number {
+
+	public static void main(String[] args) {
+		int a=1;
+		while(a<=50) {
+			if(a%1==0 & a%a==0) {
+				System.out.println(a+" number is prime");
+			}
+			else
+			{
+				System.out.println("number is not prime");
+			}
+			a++;
+		}
+		
+		
+		
+	}
+	
+}

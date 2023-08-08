@@ -1,0 +1,27 @@
+package allProgram;
+
+public class constructor1 {
+
+	public void test()// method
+	{
+		System.out.println("Hello");
+	}
+	
+	public constructor1(int a)//constructor with same name as class and no return type
+	{
+		System.out.println("I am constructor");
+	}
+	
+	public constructor1(int a, int b)//parametrised cons. we can create multiple constr in one class
+	{
+		System.out.println("I am parametrised constructor");
+	}
+	
+	
+	
+	public static void main(String[] args) {
+		constructor1 obj = new constructor1();//as constructor is created after it goes to its body so it print first then goes to obj and call method 
+		constructor1 obj1 = new constructor1(2);
+		obj.test();
+	}
+}

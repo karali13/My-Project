@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FacbookAutomation]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="regression(failed)">
+    <classes>
+      <class name="basic.sample">
+        <methods>
+          <include name="test4"/>
+          <include name="test3"/>
+        </methods>
+      </class> <!-- basic.sample -->
+      <class name="basic.FacebbookPage">
+        <methods>
+          <include name="InvalidPass"/>
+          <include name="validData"/>
+          <include name="InvalidData"/>
+          <include name="aftermethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- basic.FacebbookPage -->
+    </classes>
+  </test> <!-- regression(failed) -->
+</suite> <!-- Failed suite [FacbookAutomation] -->

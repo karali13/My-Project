@@ -1,0 +1,26 @@
+package allProgram;
+
+public class primenumber {
+	
+	public static void main(String[] args) {
+		
+		int a=5;
+		
+		int b=2;
+		int count =0;
+		
+		while(b<=10)
+		{
+		if(a%b==0)
+		{
+			//System.out.println();
+			count++;
+		}
+		b++;
+		}
+		if(count==1)
+		{
+			System.out.println("is prime");
+		}
+	}
+}

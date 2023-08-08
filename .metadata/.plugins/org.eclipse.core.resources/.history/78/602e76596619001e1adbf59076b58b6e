@@ -1,0 +1,26 @@
+package allProgram;
+
+public class primenumber {
+	
+	public static void main(String[] args) {
+	
+		
+		int count =0;
+		
+		for(int a=2;a<=100;a++)
+		{
+			for(int j=2;j<a;j++)
+			{
+				if(a%j==0)
+				{
+					count++;
+				}
+			}
+			if(count==0)
+			{
+				System.out.println(a+"is prime");
+			}
+		}
+		
+	}
+}
